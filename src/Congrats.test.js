@@ -4,10 +4,10 @@ import Congrats from "./Congrats";
 
 import { findByTestAttr, checkProps } from "../test/setupTests";
 
-const defaultProps = { success: false};
+const defaultProps = { success: false };
 
 const setup = (props = {}) => {
-  const setupProps = { ...defaultProps, ...props }
+  const setupProps = { ...defaultProps, ...props };
   return shallow(<Congrats {...setupProps} />);
 };
 
@@ -22,7 +22,7 @@ test("renders without error", () => {
 test("renders no text when the success prop is false", () => {
   const wrapper = setup({ success: false });
   const component = findByTestAttr(wrapper, "component-congrats");
-  expect(component.text()).toBe("")
+  expect(component.text()).toBe("");
 });
 
 //renders non empty congratulations message when success prop is true
@@ -33,6 +33,6 @@ test("renders non-empty congrats message when success prop is true", () => {
 });
 
 test("does not throw warning with expected props", () => {
-  const expectedProps = { success: false};
+  const expectedProps = { success: false };
   checkProps(Congrats, expectedProps);
-})
+});
