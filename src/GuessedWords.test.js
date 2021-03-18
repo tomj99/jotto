@@ -38,7 +38,7 @@ describe("if there are words guessed", () => {
   const guessedWords = [
     { guessedWord: "train", letterMatchCount: 3 },
     { guessedWord: "agile", letterMatchCount: 1 },
-    { guessedWord: "parted", letterMatchCount: 4 },
+    { guessedWord: "", letterMatchCount: 4 },
     { guessedWord: "party", letterMatchCount: 5 },
   ];
   let wrapper;
