@@ -16,3 +16,5 @@ test("app renders without error", () => {
   const appComponent = findByTestAttr(wrapper, "component-app");
   expect(appComponent.length).toBe(1);
 });
+
+
