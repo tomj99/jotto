@@ -2,23 +2,23 @@ import React from "react";
 import PropTypes from "prop-types";
 const Congrats = (props) => {
   if (props.success) {
+    var styles = {
+      backgroundColor: "lightGreen",
+    };
     return (
-    <div data-test="component-congrats">
-      <span data-test="congrats-message">
-        Congrats Bitch! You Guessed the Word!
-      </span>
-    </div>
+      <div data-test="component-congrats">
+        <span data-test="congrats-message" style={styles}>
+          Congrats Bitch! You Guessed the Word!
+        </span>
+      </div>
     );
   } else {
-    return (
-        <div data-test="component-congrats" />
-    );
+    return <div data-test="component-congrats" />;
   }
-}
+};
 
 Congrats.propTypes = {
-    success: PropTypes.bool.isRequired,
-
+  success: PropTypes.bool.isRequired,
 };
 
 export default Congrats;
@@ -39,7 +39,6 @@ export default Congrats;
 //         );
 //     }
 // }
-
 
 //older way to do this
 // function Congrats (props) {
